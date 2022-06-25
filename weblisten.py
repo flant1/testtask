@@ -38,6 +38,6 @@ class serverclass(http.server.BaseHTTPRequestHandler):
 				self.send_response(200)
 				self.end_headers()
 				self.wfile.write(bytes("<html>wrong url</html>","utf-8"))
-serverrun=http.server.HTTPServer(('192.168.56.114',8080),serverclass)
+serverrun=http.server.HTTPServer(('0.0.0.0',8080),serverclass)
 try:serverrun.serve_forever()
 except:KeyboardInterrupt
